@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFAPP"
         mc:Ignorable="d"
-        Title="汇众智慧科技有限公司" Height="900" Width="1500" 
+        Title="致汇科技有限公司" Height="900" Width="1500" 
         FontFamily="MicroSoft YaHei" FontWeight="ExtraLight"
         WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}">
     <Window.Resources>
@@ -60,9 +60,7 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
                             </Trigger>
                             <DataTrigger Binding="{Binding Text,RelativeSource={RelativeSource Mode=Self}}" Value="">
-                                <Setter  TargetName="mt" Property="Visibility" Value="Visible">
-
-                                </Setter>
+                                <Setter  TargetName="mt" Property="Visibility" Value="Visible"/>
                             </DataTrigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
