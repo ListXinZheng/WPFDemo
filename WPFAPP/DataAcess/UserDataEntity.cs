@@ -28,6 +28,13 @@ namespace WPFAPP.DataAcess
         /// 真实姓名
         /// </summary>
         public string RealName { get; set; }
-
+        /// <summary>
+        /// 性别
+        /// </summary>
+        public int Gender { get; set; }
+        /// <summary>
+        /// 图标
+        /// </summary>
+        public string Avatar { get; set; }
     }
 }

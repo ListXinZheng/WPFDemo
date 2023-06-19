@@ -49,7 +49,12 @@ namespace WPFAPP.Model
             {
                 //进行数据库访问和验证
             }
-
+            GlobalValues.Userinfo.UserName = LoginDataModel.UserName;
+            GlobalValues.Userinfo.userLevel = 0;
+            GlobalValues.Userinfo.Password = LoginDataModel.PassWord;
+            GlobalValues.Userinfo.RealName = "lihang";
+            GlobalValues.Userinfo.Gender = 0;
+            GlobalValues.Userinfo.Avatar = "../Assets/Imag/Ultra.png";
             Application.Current.Dispatcher.Invoke(() => { (obj as Window).DialogResult = true; });
         }
         private string _errmesg;

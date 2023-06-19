@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFAPP.Common;
+using WPFAPP.ViewModel;
 
 namespace WPFAPP.View
 {
@@ -24,6 +26,13 @@ namespace WPFAPP.View
         {
             InitializeComponent();
             this.MaxHeight = SystemParameters.PrimaryScreenHeight;
+            MainViewModel model =   new MainViewModel();
+            this.DataContext = model;
+            model.UserInfo.Level = GlobalValues.Userinfo.userLevel;
+            model.UserInfo.UserName = GlobalValues.Userinfo.UserName;
+            model.UserInfo.Gender = GlobalValues.Userinfo.Gender;
+            model.UserInfo.Avatar = GlobalValues.Userinfo.Avatar;
+            model.UserInfo.RealName = GlobalValues.Userinfo.RealName;
         }
 
         private void LoginLeftBtnMouse(object sender, MouseButtonEventArgs e)
