@@ -82,11 +82,11 @@
                                 <ColumnDefinition Width="auto"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <Border Width="14" Height=" 14" CornerRadius="8" Background="White" BorderThickness="1" BorderBrush="#007DFA" Margin=" 5,0"
+                            <Border Width="20" Height=" 20" CornerRadius="8" Background="White" BorderThickness="1" BorderBrush="#007DFA" Margin=" 5,0"
                                     VerticalAlignment="Center">
                                 <Border Width="12" Height="12" CornerRadius=" 6" BorderThickness="1" Background="#007DFA" Name="cbx" Visibility="Collapsed"/>
                             </Border>
-                            <ContentControl Content="{TemplateBinding Content}" VerticalAlignment="Center" Grid.Column="1" Background="White" Width="20"/>
+                            <ContentControl Content="{TemplateBinding Content}" VerticalAlignment="Center" Grid.Column="1" Background="White" Width="30"/>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked" Value=" true">
@@ -111,7 +111,7 @@
             </BeginStoryboard>
         </EventTrigger>
     </Window.Triggers>
-    <Border Background="White" CornerRadius="10">
+    <Border Background="#EEFFFFFF" CornerRadius="10">
         <Border.Effect>
             <DropShadowEffect ShadowDepth="0" Color="Blue" BlurRadius="5" Opacity=" 0.5"  Direction="0"/>
         </Border.Effect>
@@ -190,14 +190,15 @@
                             <ImageBrush ImageSource="{Binding UserInfo.Avatar}"/>
                         </Border.Background>
                     </Border>
-                    <Grid Grid.Row="1">
+                    <Grid Grid.Row="1" Margin="20,10">
                         <Grid.Resources>
                             <Style TargetType="TextBlock">
                                 <Setter Property="Foreground" Value="White"/>
+                                <Setter  Property="FontSize" Value="25"/>
                             </Style>
                             <Style TargetType="RadioButton">
                                 <Setter Property="Foreground" Value="White"/>
-                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontSize" Value="25"/>
                             </Style>
                         </Grid.Resources>
                         <Grid.RowDefinitions>
@@ -206,20 +207,20 @@
                             <RowDefinition Height="40"/>
                             <RowDefinition Height="40"/>
                         </Grid.RowDefinitions>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="用户名"/>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="用户名:"/>
                             <TextBlock Text="{Binding UserInfo.UserName}" Margin="15,0,0,0"/>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Grid.Row="1">
-                            <TextBlock Text="真实姓名"/>
+                        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center">
+                            <TextBlock Text="真实姓名:"/>
                             <TextBlock Text="{Binding UserInfo.RealName}" Margin="15,0,0,0"/>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Grid.Row="2">
-                            <TextBlock Text="等级"/>
-                            <TextBlock Text="{Binding UserInfo.Level}" Margin="15,0,0,0"/>
+                        <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Center">
+                            <TextBlock Text="等级:"/>
+                            <TextBlock Text="{Binding UserInfo.Level}" Margin="15,0,0,0" VerticalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Grid.Row="3">
-                            <TextBlock Text="性别"/>
+                            <TextBlock Text="性别:" VerticalAlignment="Center"/>
                             <RadioButton Content="男" Margin="15,0,0,0" Template="{StaticResource genderRaidobutton}" IsChecked="{Binding UserInfo.Gender, Converter={StaticResource genderconverter},ConverterParameter=0}"/>
                             <RadioButton Content="女" Margin="15,0,0,0" Template="{StaticResource genderRaidobutton}" IsChecked="{Binding UserInfo.Gender ,Converter={StaticResource genderconverter} , ConverterParameter=1}"/>
                         </StackPanel>

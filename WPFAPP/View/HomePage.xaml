@@ -21,7 +21,7 @@
                 <Grid>
                     <lvc:CartesianChart Margin="0,0,0,45">
                         <lvc:CartesianChart.Series>
-                            <lvc:LineSeries Stroke="#FECC71" Fill="#FFF2DE"  PointGeometrySize="0" Values="1,2,3,40,5,6,7"/>
+                            <lvc:LineSeries Stroke="#FECC71" Fill="#FFF2DE"  PointGeometrySize="0" Values="10,20,30,40,32,24,12"/>
                         </lvc:CartesianChart.Series>
                         <lvc:CartesianChart.AxisX>
                             <lvc:Axis ShowLabels="False"/>
@@ -56,7 +56,7 @@
                 <Grid>
                     <lvc:CartesianChart Margin="0,0,0,45">
                         <lvc:CartesianChart.Series>
-                            <lvc:LineSeries Stroke="#FF7261" Fill="#FFE3E0"  PointGeometrySize="0" Values="1,2,3,40,5,6,7"/>
+                            <lvc:LineSeries Stroke="#FF7261" Fill="#FFE3E0"  PointGeometrySize="0" Values="10,20,37,40,43,45,32"/>
                         </lvc:CartesianChart.Series>
                         <lvc:CartesianChart.AxisX>
                             <lvc:Axis ShowLabels="False"/>
@@ -78,7 +78,7 @@
                                        HorizontalAlignment="Center" Foreground="#FF7261"/>
                         </Border>
                         <StackPanel Orientation="Horizontal" Margin=" 0,0,5,0">
-                            <TextBlock Text="CPU使用率" Foreground="#FFBC57" VerticalAlignment="Center"/>
+                            <TextBlock Text="内存使用率" Foreground="#FFBC57" VerticalAlignment="Center"/>
                             <TextBlock Text="18%" FontSize="20" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FFBC57"/>
                         </StackPanel>
                     </StackPanel>
@@ -91,7 +91,7 @@
                 <Grid>
                     <lvc:CartesianChart Margin="0,0,0,45">
                         <lvc:CartesianChart.Series>
-                            <lvc:LineSeries Stroke="#FECC71" Fill="#FFF2DE"  PointGeometrySize="0" Values="1,2,3,40,5,6,7"/>
+                            <lvc:LineSeries Stroke="#CA3157" Fill="#66CA3157"  PointGeometrySize="0" Values="32,30,34,33,31,32,34"/>
                         </lvc:CartesianChart.Series>
                         <lvc:CartesianChart.AxisX>
                             <lvc:Axis ShowLabels="False"/>
@@ -109,12 +109,12 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
                         <Border Width=" 36" Height="36" Background="#FFF5E9" CornerRadius="10" Margin=" 15,3">
-                            <TextBlock Text="&#xe6c4;" FontFamily="../Assets/Fonts/#iconfont" FontSize="30" VerticalAlignment="Center" 
-                                       HorizontalAlignment="Center" Foreground="#FFBC57"/>
+                            <TextBlock Text="&#xea3f;" FontFamily="../Assets/Fonts/#iconfont" FontSize="30" VerticalAlignment="Center" 
+                                       HorizontalAlignment="Center" Foreground="#CDEC57"/>
                         </Border>
                         <StackPanel Orientation="Horizontal" Margin=" 0,0,5,0">
-                            <TextBlock Text="CPU使用率" Foreground="#FFBC57" VerticalAlignment="Center"/>
-                            <TextBlock Text="18%" FontSize="20" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FFBC57"/>
+                            <TextBlock Text="员工在线人数" Foreground="#CA3157" VerticalAlignment="Center"/>
+                            <TextBlock Text="27" FontSize="20" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#CA3157"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>
@@ -126,13 +126,13 @@
                 <Grid>
                     <lvc:CartesianChart Margin="0,0,0,45">
                         <lvc:CartesianChart.Series>
-                            <lvc:LineSeries Stroke="#FECC71" Fill="#FFF2DE"  PointGeometrySize="0" Values="1,2,3,40,5,6,7"/>
+                            <lvc:LineSeries Stroke="#146C17" Fill="#55146C17"  PointGeometrySize="0" Values="211,223,215,267,279,280,288"/>
                         </lvc:CartesianChart.Series>
                         <lvc:CartesianChart.AxisX>
                             <lvc:Axis ShowLabels="False"/>
                         </lvc:CartesianChart.AxisX>
                         <lvc:CartesianChart.AxisY>
-                            <lvc:Axis ShowLabels="False" MinValue="0" MaxValue="100"/>
+                            <lvc:Axis ShowLabels="False" MinValue="0" MaxValue="500"/>
                         </lvc:CartesianChart.AxisY>
                     </lvc:CartesianChart>
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 15">
@@ -144,12 +144,12 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
                         <Border Width=" 36" Height="36" Background="#FFF5E9" CornerRadius="10" Margin=" 15,3">
-                            <TextBlock Text="&#xe6c4;" FontFamily="../Assets/Fonts/#iconfont" FontSize="30" VerticalAlignment="Center" 
-                                       HorizontalAlignment="Center" Foreground="#FFBC57"/>
+                            <TextBlock Text="&#xe6d0;" FontFamily="../Assets/Fonts/#iconfont" FontSize="30" VerticalAlignment="Center" 
+                                       HorizontalAlignment="Center" Foreground="#146C17"/>
                         </Border>
                         <StackPanel Orientation="Horizontal" Margin=" 0,0,5,0">
-                            <TextBlock Text="CPU使用率" Foreground="#FFBC57" VerticalAlignment="Center"/>
-                            <TextBlock Text="18%" FontSize="20" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FFBC57"/>
+                            <TextBlock Text="客户数量" Foreground="#146C17" VerticalAlignment="Center"/>
+                            <TextBlock Text="288" FontSize="20" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#146C17"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>
@@ -176,7 +176,7 @@
                 </TextBlock>
                 <Border CornerRadius="5" Background="White" Grid.Row="1">
                     <Border.Effect>
-                        <DropShadowEffect Color="Gray" ShadowDepth="10"  BlurRadius="15" Opacity="0.4" Direction="270"/>
+                        <DropShadowEffect Color="DimGray" ShadowDepth="10"  BlurRadius="35" Opacity="0.4" Direction="270"/>
                     </Border.Effect>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -197,6 +197,17 @@
                             </StackPanel>
                             <TextBlock Text="最高使用率" Foreground="#3F4C5D" FontSize="20"/>
                         </StackPanel>
+                        <lvc:CartesianChart Margin="40,0,40,5" Grid.Column="1">
+                            <lvc:CartesianChart.Series>
+                                <lvc:LineSeries Stroke="#CA3157" Fill="#66CA3157"  PointGeometrySize="0" Values="215,110,300,322,117,112,218"/>
+                            </lvc:CartesianChart.Series>
+                            <lvc:CartesianChart.AxisX>
+                                <lvc:Axis ShowLabels="False"/>
+                            </lvc:CartesianChart.AxisX>
+                            <lvc:CartesianChart.AxisY>
+                                <lvc:Axis ShowLabels="False" MinValue="0" MaxValue="400"/>
+                            </lvc:CartesianChart.AxisY>
+                        </lvc:CartesianChart>
                     </Grid>
                 </Border>
             </Grid>
