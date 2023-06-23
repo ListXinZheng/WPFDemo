@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="LHControls.Instrucment"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LHControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="500">
+    <Grid>
+        <Ellipse Name="Circle" Fill="{Binding PlateBackground,RelativeSource= {RelativeSource AncestorType=UserControl, Mode=FindAncestor }}"/>
+        <Canvas x:Name="maincanvas" Width="{Binding Width,ElementName=Circle}" Height="{Binding Height, ElementName=Circle}"/>
+        <Path Data="" Stroke="White" StrokeThickness="4" Name="pathname" Width="{Binding Width,ElementName=Circle}" 
+              Height="{Binding Height, ElementName=Circle}" RenderTransformOrigin="0.5,0.5" StrokeStartLineCap="Round"  StrokeEndLineCap="Round">
+            <Path.RenderTransform>
+                <RotateTransform Angle="-45" > 
+                    
+                </RotateTransform>
+            </Path.RenderTransform>
+        </Path>
+        <Path Data="" Fill="{Binding PointerBackGround,RelativeSource= {RelativeSource AncestorType=UserControl, Mode=FindAncestor }}" Name="Pointer" Width="{Binding Width,ElementName=Circle}" Height="{Binding Height, ElementName=Circle}"
+               RenderTransformOrigin =" 0.5,0.5">
+            <Path.RenderTransform>
+                <RotateTransform Angle="-45" x:Name="rtpointer">
+
+                </RotateTransform>
+            </Path.RenderTransform>
+        </Path>
+        <Border Width="20" Height="20" CornerRadius="10">
+            <Border.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="White" Offset="0.58"/>
+                    <GradientStop Color="#FF97B5BD" Offset="1"/>
+                </RadialGradientBrush>
+            </Border.Background>
+
+        </Border>
+    </Grid>
+</UserControl>

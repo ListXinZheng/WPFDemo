@@ -5,8 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPFAPP.View"
              xmlns:lvc ="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:lhc ="clr-namespace:LHControls;assembly=LHControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="800" d:DesignWidth="800">
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="160"/>
@@ -197,17 +198,83 @@
                             </StackPanel>
                             <TextBlock Text="最高使用率" Foreground="#3F4C5D" FontSize="20"/>
                         </StackPanel>
-                        <lvc:CartesianChart Margin="40,0,40,5" Grid.Column="1">
+                        <lvc:CartesianChart Margin="20" Grid.Column="1">
                             <lvc:CartesianChart.Series>
-                                <lvc:LineSeries Stroke="#CA3157" Fill="#66CA3157"  PointGeometrySize="0" Values="215,110,300,322,117,112,218"/>
+                                <lvc:LineSeries Stroke="#3BC8D7" Fill="#E1F2F6"  PointGeometrySize="0" Values="215,110,300,322,117,112,218"/>
                             </lvc:CartesianChart.Series>
                             <lvc:CartesianChart.AxisX>
                                 <lvc:Axis ShowLabels="False"/>
                             </lvc:CartesianChart.AxisX>
                             <lvc:CartesianChart.AxisY>
-                                <lvc:Axis ShowLabels="False" MinValue="0" MaxValue="400"/>
+                                <lvc:Axis ShowLabels="True" MinValue="0" MaxValue="300"/>
                             </lvc:CartesianChart.AxisY>
                         </lvc:CartesianChart>
+                    </Grid>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="1" Margin="0,0,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="致汇科技" Foreground="#3F4C5D" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
+                <Border Grid.Row="1" Background="#007DFA" CornerRadius="10">
+                    <Border.Effect>
+                        <DropShadowEffect Color="LightGray" ShadowDepth="10" BlurRadius="55" Opacity="0.5" Direction=" 270"/>
+                    </Border.Effect>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="80"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Hello,同事们！" Margin="20,10 " FontSize="20" Foreground="White"/>
+                            <TextBlock Text="       深圳市致汇科技有限公司专注于工业自动化控制产品的研发、生产和销售,以拥有自主知识产权的工业自动化控制技术为基础，以快速为客户提供个性化的解决方案为主要经营模式." 
+                                       Foreground="White" TextWrapping="Wrap" LineHeight="20" Margin="10,0"/>
+                        </StackPanel>
+                        <Image Grid.Column="1" Source="../Assets/Imag/logo.png"/>
+                    </Grid>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="指针仪表数据监控" Margin="10,0" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"/>
+                <Border CornerRadius="15" Grid.Row="1" Margin=" 10,0,10,0">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="White"/>
+                            <GradientStop Color="#EDFAF0 " Offset="0.3"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Grid>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 15">
+                            <Border Width="20" Height="20" Background="#EDFAF0" CornerRadius="5">
+                                <TextBlock Text="&#xe602;" FontFamily="../Assets/Fonts/#iconfont" FontSize="18" VerticalAlignment="Center" 
+                                       HorizontalAlignment="Center" Foreground="Red"/>
+                            </Border>
+                            <TextBlock Text="{Binding InstrumentValue}" Foreground="Red" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin=" 10,0,0,10">
+                            <TextBlock Text="当前使用率" Foreground="#3F4C5D"/>
+                            <TextBlock Text="{Binding InstrumentValue}" Foreground="#3F4C5D" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin=" 0,0,10,10">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="1">
+                                <Border Width="20" Height="20" Background="#EDFAF0" CornerRadius="5">
+                                    <TextBlock Text="&#xe602;" FontFamily="../Assets/Fonts/#iconfont" FontSize="18" VerticalAlignment="Center" 
+                                       HorizontalAlignment="Center" Foreground="#7ADA95"/>
+                                </Border>
+                                <TextBlock Text="{Binding MaxHigh}" Foreground="#7ADA95" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                            </StackPanel>
+                            <TextBlock Text="最高使用率" Foreground="#3F4C5D" FontSize="20"/>
+                        </StackPanel>
+                        <lhc:Instrucment Margin="0,20,0,20" TextFontSize="15"  Value="{Binding InstrumentValue}" MaxValue="100" MinValue="0" 
+                                         Interval="10"  PlateBackground="Orange" PointerBackGround="Red" LineShowColor="Blue" TextForeGround="White">
+                            
+                        </lhc:Instrucment >
                     </Grid>
                 </Border>
             </Grid>

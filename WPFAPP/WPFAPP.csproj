@@ -21,6 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LHControls\LHControls.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Assets\Fonts\iconfont.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
