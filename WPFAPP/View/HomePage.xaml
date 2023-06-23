@@ -267,7 +267,7 @@
                                     <TextBlock Text="&#xe602;" FontFamily="../Assets/Fonts/#iconfont" FontSize="18" VerticalAlignment="Center" 
                                        HorizontalAlignment="Center" Foreground="#7ADA95"/>
                                 </Border>
-                                <TextBlock Text="{Binding MaxHigh}" Foreground="#7ADA95" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                                <TextBlock Text="{Binding MaxHigh}" Foreground="#7ADA95" FontSize="20" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,0,0"/>
                             </StackPanel>
                             <TextBlock Text="最高使用率" Foreground="#3F4C5D" FontSize="20"/>
                         </StackPanel>
