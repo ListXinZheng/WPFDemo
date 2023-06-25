@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPFAPP.View"
              xmlns:lvc ="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:lvcs ="clr-namespace:LiveCharts;assembly=LiveCharts"
              xmlns:lhc ="clr-namespace:LHControls;assembly=LHControls"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="800">
@@ -279,5 +280,130 @@
                 </Border>
             </Grid>
         </Grid>
-    </Grid>
+        <Grid Margin="10,0,10,0" Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=" 40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text=" 产品总览" Foreground="#3F4C5D" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+            <TextBlock Foreground="#3F4C5D" VerticalAlignment="Center" FontSize="15" FontWeight="Bold" 
+                           HorizontalAlignment="Right" Margin="10,0" Cursor="Hand">
+                    <Hyperlink>详情</Hyperlink>
+            </TextBlock>
+            <StackPanel Grid.Row="1">
+                <Border Background="White" CornerRadius="10" Margin=" 0,5">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="15" ShadowDepth="5" Direction="270" Opacity="0.3" Color="Gray"/>
+                    </Border.Effect>
+                    <Grid Height="70">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="3.5*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="运动控制卡16轴" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15"/>
+                        <lvc:PieChart Grid.Column="1" LegendLocation="Right" InnerRadius="15">
+                            <lvc:PieChart.Series>
+                                <lvcs:SeriesCollection>
+                                    <lvc:PieSeries Title="线束" Values="15" DataLabels="False"/>
+                                    <lvc:PieSeries Title="点胶" Values="5" DataLabels="False"/>
+                                    <lvc:PieSeries Title="包装" Values="4" DataLabels="False"/>
+                                </lvcs:SeriesCollection>
+                            </lvc:PieChart.Series>
+                            <lvc:PieChart.ChartLegend>
+                                <lvc:DefaultLegend BulletSize="10"/>
+                            </lvc:PieChart.ChartLegend>
+                            <lvc:PieChart.DataTooltip>
+                                <lvc:DefaultLegend BulletSize="10"/>
+                            </lvc:PieChart.DataTooltip>
+                        </lvc:PieChart>
+                        <UniformGrid Columns="5" Grid.Column="2">
+                            <Grid Margin="10,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Center" >
+                                    <TextBlock Text="朝阳光" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="171" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1">
+                                    <TextBlock Text="&#xe6ad;" FontFamily="../Assets/Fonts/#iconfont" Foreground="Green" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                    <TextBlock Text="4%" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Margin="10,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Center" >
+                                    <TextBlock Text="研泰" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="171" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1">
+                                    <TextBlock Text="&#xe690;" FontFamily="../Assets/Fonts/#iconfont" Foreground="Green" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                    <TextBlock Text="4%" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Margin="10,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Center" >
+                                    <TextBlock Text="大森林" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="171" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1">
+                                    <TextBlock Text="&#xe626;" FontFamily="../Assets/Fonts/#iconfont" Foreground="Green" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                    <TextBlock Text="4%" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Margin="10,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Center" >
+                                    <TextBlock Text="海胜" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="171" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1">
+                                    <TextBlock Text="&#xe6f0;" FontFamily="../Assets/Fonts/#iconfont" Foreground="Green" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                    <TextBlock Text="4%" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Margin="10,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Center" >
+                                    <TextBlock Text="瑞领" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="171" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1">
+                                    <TextBlock Text="&#xe651;" FontFamily="../Assets/Fonts/#iconfont" Foreground="Green" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                    <TextBlock Text="4%" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                </StackPanel>
+                            </Grid>
+                        </UniformGrid>
+                    </Grid>
+                    
+                </Border>
+                <Border Background="White" CornerRadius="10" Margin=" 0,5">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="15" ShadowDepth="5" Direction="270" Opacity="0.3" Color="Gray"/>
+                    </Border.Effect>
+                    <Grid Height="70">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </Grid>
+        </Grid>
 </UserControl>
