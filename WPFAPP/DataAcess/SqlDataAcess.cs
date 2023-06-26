@@ -15,9 +15,12 @@ namespace WPFAPP.DataAcess
         {
             
         }
-        public static SqlDataAcess Instance()
+        public static SqlDataAcess Instance
         {
-           return instance ?? (instance =  new SqlDataAcess());
+            get
+            {
+                return instance ?? (instance = new SqlDataAcess());
+            }
         }
         SqlConnection sqlConnection;
         SqlCommand Command;
