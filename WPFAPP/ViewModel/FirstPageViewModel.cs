@@ -126,22 +126,22 @@ namespace WPFAPP.ViewModel
                     {
                         new PieSeries()
                         {
-                        Title="朝阳光",
-                        Values = new ChartValues<ObservableValue>() { new ObservableValue(25)} ,
+                        Title="安德瑞",
+                        Values = new ChartValues<ObservableValue>() { new ObservableValue(30)} ,
                         DataLabels = false
                         }
                          ,
                         new PieSeries()
                         {
-                        Title = "欣旺达",
-                        Values = new ChartValues<ObservableValue>() { new ObservableValue(9) },
+                        Title = "同硕鑫",
+                        Values = new ChartValues<ObservableValue>() { new ObservableValue(5) },
                         DataLabels = false
                         }
                         ,
                         new PieSeries()
                         {
-                        Title = "瑞领",
-                        Values = new ChartValues<ObservableValue>() { new ObservableValue(13) },
+                        Title = "日研",
+                        Values = new ChartValues<ObservableValue>() { new ObservableValue(18) },
                         DataLabels = false
                         }
                     },
@@ -198,22 +198,22 @@ namespace WPFAPP.ViewModel
                     {
                         new PieSeries()
                         {
-                        Title="朝阳光",
-                        Values = new ChartValues<ObservableValue>() { new ObservableValue(25)} ,
+                        Title="正浩",
+                        Values = new ChartValues<ObservableValue>() { new ObservableValue(9)} ,
                         DataLabels = false
                         }
                          ,
                         new PieSeries()
                         {
-                        Title = "欣旺达",
-                        Values = new ChartValues<ObservableValue>() { new ObservableValue(9) },
+                        Title = "海名声",
+                        Values = new ChartValues<ObservableValue>() { new ObservableValue(25) },
                         DataLabels = false
                         }
                         ,
                         new PieSeries()
                         {
-                        Title = "瑞领",
-                        Values = new ChartValues<ObservableValue>() { new ObservableValue(13) },
+                        Title = "鑫伦",
+                        Values = new ChartValues<ObservableValue>() { new ObservableValue(6) },
                         DataLabels = false
                         }
                     },
